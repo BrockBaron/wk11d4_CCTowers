@@ -25,6 +25,19 @@ public class Hotel {
     public int countGuests() {
         return  this.roomList.size();
     }
+
+//    public void bookRoom(){
+//
+//    }
+
+    public void addRoom(Room room){
+        roomList.add(room);
+
+    }
+
+    public void removeRoom(Room room){
+        roomList.remove(room);
+    }
 }
 
 

@@ -12,7 +12,7 @@ public class HotelTest {
     @Before
     public void before() {
         hotel = new Hotel();
-        room = new Bedroom(1, 101, BedroomType.SINGLE);
+        room = new Bedroom(1, 101, BedroomType.SINGLE, 1);
         guest = new Guest("Nick Lekkas");
     }
 
@@ -29,4 +29,11 @@ public class HotelTest {
        hotel.checkGuestOut(room, guest);
         assertEquals(0, room.countGuestsInRoom());
     }
+
+    @Test
+    public void canBookRoom() {
+        hotel.addRoom(room);
+        assertEquals(1, hotel.countBooking());
+    }
+
 }

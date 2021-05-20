@@ -4,11 +4,13 @@ public class Bedroom extends Room {
 
     private int roomNumber;
     private BedroomType bedroomType;
+    private int noOfNights;
 
-    public Bedroom( int capacity, int roomNumber, BedroomType bedroomType) {
+    public Bedroom( int capacity, int roomNumber, BedroomType bedroomType, int noOfNights) {
         super(capacity);
         this.roomNumber = roomNumber;
         this.bedroomType = bedroomType;
+        this.noOfNights = noOfNights;
     }
 
 
