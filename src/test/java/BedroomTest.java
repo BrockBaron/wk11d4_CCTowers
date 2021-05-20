@@ -56,7 +56,7 @@ public class BedroomTest {
 
     @Test
     public void canReturnBillFor3Nights() {
-
+        Bedroom bedroom1 = new Bedroom(1, 101, BedroomType.SINGLE, 3, 50.00);
         assertEquals(150.00, bedroom.getTotalBill(), 0.1);
     }
 }
