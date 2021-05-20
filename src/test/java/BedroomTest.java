@@ -9,7 +9,7 @@ public class BedroomTest {
 
     @Before
     public void setUp(){
-        bedroom = new Bedroom(1, 101, BedroomType.SINGLE, 1);
+        bedroom = new Bedroom(1, 101, BedroomType.SINGLE, 1, 50.00);
     }
 
     @Test
@@ -40,5 +40,23 @@ public class BedroomTest {
         bedroom.addGuest(guestOne);
         bedroom.removeGuest(guestOne);
         assertEquals(0, bedroom.countGuestsInRoom());
+    }
+
+    @Test
+    public void roomHasRate() {
+        assertEquals(50.00, bedroom.getRoomRate(), 0.1);
+
+    }
+
+    @Test
+    public void canReturnTotalBill() {
+
+        assertEquals(50.00, bedroom.getTotalBill(), 0.1);
+    }
+
+    @Test
+    public void canReturnBillFor3Nights() {
+
+        assertEquals(150.00, bedroom.getTotalBill(), 0.1);
     }
 }

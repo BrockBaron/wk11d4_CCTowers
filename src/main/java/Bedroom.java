@@ -26,4 +26,12 @@ public class Bedroom extends Room {
     public BedroomType getBedroomType() {
         return bedroomType;
     }
+
+    public double getRoomRate() {
+        return this.roomRate;
+    }
+
+    public double getTotalBill() {
+        return this.noOfNights * roomRate;
+    }
 }

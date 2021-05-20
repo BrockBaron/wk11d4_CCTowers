@@ -42,6 +42,7 @@ public class HotelTest {
         hotel.removeRoom(room);
         assertEquals(0, hotel.countBooking());
 
-
     }
+
+
 }
