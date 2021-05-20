@@ -22,9 +22,9 @@ public class Hotel {
         room.removeGuest(guest);
     }
 
-    public int countGuests() {
-        return  this.roomList.size();
-    }
+//    public int countGuests() {
+//        return  this.roomList.size();
+//    }
 
 //    public void bookRoom(){
 //
@@ -37,6 +37,10 @@ public class Hotel {
 
     public void removeRoom(Room room){
         roomList.remove(room);
+    }
+
+    public int countBooking() {
+        return this.roomList.size();
     }
 }
 
